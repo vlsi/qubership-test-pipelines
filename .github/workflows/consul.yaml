@@ -57,7 +57,7 @@ jobs:
       - name: Get current workflow branch
         id: get_branch
         run: |
-          #echo ${{ github.action_ref }}
+          #echo ${{ github.action_ref }} ${{ inputs.pipeline_branch }}
           COMMIT=$(echo "${{ github.event.workflow_call.uses }}" | awk -F '@' '{print $NF}')
           echo "Extracted commit: $COMMIT"
       - name: Checkout pipeline
