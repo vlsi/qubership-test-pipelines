@@ -13,7 +13,7 @@ on:
       pipeline_branch:
         description: 'Test pipeline branch name'
         type: string
-        required: true
+        required: false
         default: ${{ github.action_ref }}
       runner_type:
         description: 'Runner type (self-hosted or ubuntu-latest)'
