@@ -10,10 +10,11 @@ on:
         description: 'Path to versions list file'
         type: string
         required: true
-#      pipeline_branch:
-#        description: 'Test pipeline branch name'
-#        type: string
-#        required: true
+      pipeline_branch:
+        description: 'Test pipeline branch name'
+        type: string
+        required: true
+        default: ${{ github.action_ref }}
       runner_type:
         description: 'Runner type (self-hosted or ubuntu-latest)'
         type: string
